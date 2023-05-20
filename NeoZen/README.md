@@ -27,63 +27,52 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 ### Post Installation
 
-
-
-* Nvchand will ask if you want to install the example config - **NO**
-* Then it will **install all the plugins**
+![Pasted image 20230518143955.png](Images/20230518143955.png)
+- Nvchand will ask if you want to install the example config - **NO**
+- Then it will **install all the plugins**
 
 1. **Change Theme in Nvchad**
-   
-
-* Space + th
+![Pasted image 20230518144052.png](Images/20230518144052.png)
+- Space + th
 
 2. **Install Syntax highlighting for a language**
-   
-
-````nvim command
+![Pasted image 20230518144208.png](Images/20230518144208.png)
+```nvim command
 :TSInstall python
-````
-
-* Check which syntaxes are installed using the `TSInstallInfo` command.
+```
+- Check which syntaxes are installed using the `TSInstallInfo` command.
 
 3. **File Tree**
-   `Ctrl + n`
-   
-
-* Mark any files in the file tree using the *m* key on the file.
-* Create a new file using the `a` key.
-* Copy files using the `c` and `p` keys.
-* Rename files using the `r` key.
-* Delete files using the `d` key.
+`Ctrl + n`
+![Pasted image 20230518144240.png](Images/20230518144240.png)
+- Mark any files in the file tree using the *m* key on the file.
+- Create a new file using the `a` key.
+- Copy files using the `c` and `p` keys.
+- Rename files using the `r` key.
+- Delete files using the `d` key.
 
 4. **File Navigation**
-
-* Find files using the `Space + f + f` keys.
-  
-* Navigate files only in the open buffers using `Space + f + b`.
+- Find files using the `Space + f + f` keys.
+![Pasted image 20230518145023.png](Images/20230518145023.png)
+- Navigate files only in the open buffers using `Space + f + b`.
 
 5. **Nvchad Cheatsheet command**
-
-* `Space + ch`
-  
+- `Space + ch`
+![Pasted image 20230518145426.png](Images/20230518145426.png)
 
 6. **Nvchad Window Navigation**
-
-* You can split windows using:
-  * Horizontal split: :sp
-  * Vertical split: ":vsp
-* Select Right/Left: `Ctrl + l`, `Ctrl + h`
-* Select Up/Down: `Ctrl + j`, `Ctrl + k`
+- You can split windows using:
+  - Horizontal split: :sp
+  - Vertical split: ":vsp
+- Select Right/Left: `Ctrl + l`, `Ctrl + h`
+- Select Up/Down: `Ctrl + j`, `Ctrl + k`
 
 7. **Nvchad Buffers**
-
-* Navigate through all open buffers: TAB (backward: Shift + TAB)
-* Close a buffer: `Space + x`
+- Navigate through all open buffers: TAB (backward: Shift + TAB)
+- Close a buffer: `Space + x`
 
 8. Nvchad Customization
-   
-
-## Change Values of "", {}, \[\] Fast
+![Pasted image 20230518154038.png](Images/20230518154038.png)## Change Values of "", {}, \[\] Fast
 
 1. Delete inside quotes: `di"`
 1. Delete including the quotation marks: `da"`
