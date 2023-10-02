@@ -44,7 +44,7 @@ sudo apt update -y && sudo apt upgrade -y
 color_echo "Setting up .zshrc configuration..." "cyan"
 rm -f ~/.bashrc
 wget -O ~/.zshrc https://raw.githubusercontent.com/9jc/dots-ubuntu/main/.zshrc
-
+ 
 # Create a directory for tools
 color_echo "Creating a tools directory..." "cyan"
 mkdir -p ~/tools
