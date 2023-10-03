@@ -83,13 +83,13 @@ main() {
 
   # Check if the directory has already been cloned; if not, copy the config files using the standard method.
   current_directory=$(pwd)
-  if [ "$current_directory" != "Testing-Env" ]; then
-      svn export https://github.com/StealthIQ/Arch-Mastery-Hub.git/trunk/Testing-Env $HOME/Downloads/
-      cp $HOME/Downloads/Testing-Env/.config/* $HOME/.config
-      cp $HOME/Downloads/Testing-Env/.zshrc $HOME/
+  if [ "$current_directory" != "Maya-Production-Environment" ]; then
+      svn export https://github.com/StealthIQ/Arch-Mastery-Hub.git/trunk/Maya-Production-Environment $HOME/Downloads/
+      cp $HOME/Downloads/Maya-Production-Environment/.config/* $HOME/.config
+      cp $HOME/Downloads/Maya-Production-Environment/.zshrc $HOME/
   else
-      cp $current_directory/Testing-Env/.config/* $HOME/.config
-      cp $current_directory/Testing-Env/.zshrc $HOME/
+      cp $current_directory/Maya-Production-Environment/.config/* $HOME/.config
+      cp $current_directory/Maya-Production-Environment/.zshrc $HOME/
   fi
 
   # Install exa (a modern replacement for ls)
