@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # Define color variables for colored output
 declare -A colors=(
   [black]="\e[30m"
@@ -40,10 +42,17 @@ install_package() {
 color_echo "Updating and upgrading the system..." "cyan"
 sudo apt update -y && sudo apt upgrade -y
 
-# Setting up the bashrc file
+# Setting up the zshrc file
 color_echo "Setting up .zshrc configuration..." "cyan"
 rm -f ~/.bashrc
-wget -O ~/.zshrc https://raw.githubusercontent.com/9jc/dots-ubuntu/main/.zshrc
+if wget -qO ~/.zshrc --timeout=6 https://raw.githubusercontent.com/9jc/dots-ubuntu/main/.zshrc; then
+    echo "Downloaded .zshrc successfully."
+else
+    echo "Initial download of .zshrc failed. Trying alternative method..."
+    cp .zshrc ~/  # Copy .zshrc from the current directory to ~/ (home directory) as an alternative
+    # Switches to ZSH easily
+    sudo chsh $USER -s /bin/zsh && echo 'Now log out.'
+fi
  
 # Create a directory for tools
 color_echo "Creating a tools directory..." "cyan"
@@ -53,7 +62,9 @@ mkdir -p ~/tools
 color_echo "Installing essential packages..." "cyan"
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt-get update -y
+install_package build-essential
 install_package git
+install_package curl
 install_package neovim
 install_package htop
 install_package neofetch
@@ -66,6 +77,7 @@ install_package zsh
 install_package zoxide
 install_package exa
 install_package fzf
+install_package allacritty
 
 # Install exa (a modern replacement for ls)
 color_echo "Installing exa..." "cyan"
@@ -77,4 +89,19 @@ else
   color_echo "exa is already installed." "green"
 fi
 
+# Installing NVchad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+color_echo "Run nvim to finish the nvchad setup" "yellow"
+
+# Installing p10k ZSH
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+# Install Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+fix zoxide 
 color_echo "Installation and setup complete." "green"
+color_echo "Do a restart if you have just updated your system" "red"
+
+

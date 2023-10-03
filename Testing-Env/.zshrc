@@ -205,18 +205,18 @@ alias logout="gnome-session-quit --logout --no-prompt"
 alias myip="curl ifconfig.me/"
 alias vi="neovide "
 alias batr="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
-alias grub="sudo nano /etc/default/grub"
+alias grub="sudo nvim /etc/default/grub"
 alias rldb="killall xidlehook && killall sxhkd && bspc wm -r"
 # alias net-signal="watch -n1 "awk 'NR==3 {printf(\"WiFi Signal Strength = %.0f%%\\n\",\$3*10/7)}' /proc/net/wireless"" # https://askubuntu.com/questions/95676/a-tool-to-measure-signal-strength-of-wireless
 alias window-identify="xprop | grep WM_CLASS"
 
 #files
-alias rc="nano ~/.zshrc"
-alias bspwmrc="nano ~/.config/bspwm/bspwmrc"
-alias sxhkdrc="nano ~/.config/sxhkd/sxhkdrc"
-alias polybar-modules="nano ~/.config/polybar/modules.ini"
-alias xinitrc="nano ~/.xinitrc"
-alias picomrc="nano ~/.config/picom/picom.conf"
+alias rc="nvim ~/.zshrc"
+alias bspwmrc="nvim ~/.config/bspwm/bspwmrc"
+alias sxhkdrc="nvim ~/.config/sxhkd/sxhkdrc"
+alias polybar-modules="nvim ~/.config/polybar/modules.ini"
+alias xinitrc="nvim ~/.xinitrc"
+alias picomrc="nvim ~/.config/picom/picom.conf"
 
 # File Manager
 alias thunar="thunar \$(pwd)"
@@ -266,8 +266,8 @@ wifi-range() {
 # ----- Env Variables -----
 
 # Pyenv  
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Rust
 # export RUST="$HOME/.cargo/bin"
