@@ -1,4 +1,4 @@
-## Automated Testing Environment Setup
+## ⚙ Automated Testing Environment Setup
 
 This repository contains scripts to automate the setup of a testing environment, primarily for Maya projects on Ubuntu. The scripts install required packages and create configuration files for later use.
 
@@ -22,7 +22,7 @@ Certainly, I've rewritten and clarified the setup steps for Git and GitHub:
 
 ---
 
-## **Setting Up Git and GitHub**
+## 🦄 **Setting Up Git and GitHub**
 
 1. **Install Git (if not installed):**
 
@@ -40,7 +40,7 @@ Certainly, I've rewritten and clarified the setup steps for Git and GitHub:
    ```
 ---
 
-### **GitHub Authentication (No Credentials Every Time)**
+### 🔑 **GitHub Authentication (No Credentials Every Time)**
 
 1. **Using SSH Key Authentication for GitHub:**
 
@@ -58,7 +58,7 @@ Certainly, I've rewritten and clarified the setup steps for Git and GitHub:
 7. When cloning a GitHub repository, use the SSH link option and copy the link.
 8. During the cloning process, you may be prompted to add the repository to your known hosts. Type "yes" when prompted.
 ---
-### **After Authentication**
+### 🔓 **After Authentication**
 
 1. **Clone a GitHub Repository:**
 
