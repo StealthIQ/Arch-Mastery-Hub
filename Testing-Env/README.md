@@ -2,7 +2,25 @@
 
 This repository contains scripts to automate the setup of a testing environment, primarily for Maya projects on Ubuntu. The scripts install required packages and create configuration files for later use.
 
-#### Usage:
+---
+
+## 🔧 Manual Installation (preferred)
+
+1. Install Subversion package to download just a particular folder from my repo
+```shell
+sudo apt install subversion
+```
+2. Clone the particular folder only 
+```shell
+svn export https://github.com/StealthIQ/Arch-Mastery-Hub.git/trunk/Testing-Env
+```
+3. Execute the script
+```shell
+cd Testing-Env
+chmod +x ubuntu.sh # Makes the script excutable if not already
+bash ubuntu.sh # Runs the script
+```
+## 🧲 Automated Install (Under Development)
 
 **Using Wget:** (Use this)
 
@@ -17,8 +35,6 @@ curl -fsSL https://raw.githubusercontent.com/StealthIQ/Arch-Mastery-Hub/master/T
 ```
 
 These scripts simplify and expedite the setup of your testing environment.
-
-Certainly, I've rewritten and clarified the setup steps for Git and GitHub:
 
 ---
 
