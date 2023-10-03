@@ -78,11 +78,16 @@ install_package zoxide
 install_package exa
 install_package fzf
 install_package allacritty
+install_package fonts-powerline
+install_package kitty
+
+# Kitty Config 
+
 
 # Install exa (a modern replacement for ls)
 color_echo "Installing exa..." "cyan"
 if ! command_exists exa; then
-  EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+  EXA_VERSION=$(curl -s "https://api.gitcargo install alacrittyhub.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
   wget "https://github.com/ogham/exa/releases/download/v$EXA_VERSION/exa-linux-x86_64" -O ~/tools/exa
   chmod +x ~/tools/exa
 else
@@ -99,6 +104,9 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # Install Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Set default terminal to kitty
+sudo update-alternatives --config x-terminal-emulator
 
 fix zoxide 
 color_echo "Installation and setup complete." "green"
