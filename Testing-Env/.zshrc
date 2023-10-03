@@ -1,5 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+
+#p10k
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH=$PATH:/usr/local/bin
 
@@ -196,7 +200,6 @@ alias ltupg="leftwm-theme upgrade"
 
 alias wifir="sudo systemctl restart NetworkManager"
 alias wifi="bash /$HOME/.config/rofi/rofi-network-manager/rofi-network-manager.sh"
-alias cd="z"
 alias hh="history"
 alias kc="killall conky"
 alias ck="conky"
@@ -266,7 +269,7 @@ wifi-range() {
 # ----- Env Variables -----
 
 # Pyenv  
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"w
 eval "$(pyenv init -)"
 
 # Rust
@@ -284,16 +287,15 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Zoxide insted of cd
 eval "$(zoxide init zsh)"
+alias cd="z"
 # Pyenv
 eval "$(pyenv init - zsh)"
 
-unalias z
-function z () {
-    __zoxide_z "$@"
-}
 # Local Scripts
 export PATH="$PATH:$HOME/.local/bin"
 
 # Lang
 export LANG=en_US.UTF-8
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
