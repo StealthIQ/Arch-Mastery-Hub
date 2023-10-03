@@ -1,6 +1,6 @@
-## ⚙ Automated Testing Environment Setup
+## ⚙ Maya Production Environment Setup
 
-This repository contains scripts to automate the setup of a testing environment, primarily for Maya projects on Ubuntu. The scripts install required packages and create configuration files for later use.
+This repository contains scripts to automate the setup of a Production environment, primarily for Maya projects on Ubuntu. The scripts install required packages and create configuration files for later use.
 
 ---
 
@@ -12,11 +12,11 @@ sudo apt install subversion
 ```
 2. Clone the particular folder only 
 ```shell
-svn export https://github.com/StealthIQ/Arch-Mastery-Hub.git/trunk/Testing-Env
+svn export https://github.com/StealthIQ/Arch-Mastery-Hub.git/trunk/Maya-Production-Environment
 ```
 3. Execute the script
 ```shell
-cd Testing-Env
+cd Maya-Production-Environment
 chmod +x ubuntu.sh # Makes the script excutable if not already
 bash ubuntu.sh # Runs the script
 ```
@@ -25,16 +25,16 @@ bash ubuntu.sh # Runs the script
 **Using Wget:** (Use this)
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/StealthIQ/Arch-Mastery-Hub/master/Testing-Env/ubuntu.sh | bash
+wget -qO- https://raw.githubusercontent.com/StealthIQ/Arch-Mastery-Hub/master/Maya-Production-Environment/ubuntu.sh | bash
 ```
 
 **Using Curl (if wget is not there):**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/StealthIQ/Arch-Mastery-Hub/master/Testing-Env/ubuntu.sh | bash
+curl -fsSL https://raw.githubusercontent.com/StealthIQ/Arch-Mastery-Hub/master/Maya-Production-Environment/ubuntu.sh | bash
 ```
 
-These scripts simplify and expedite the setup of your testing environment.
+These scripts simplify and expedite the setup of your Production environment.
 
 ---
 
